@@ -55,7 +55,7 @@ class Scheduler():
 
             # 4. ROBOT CHANGE DETECTION WITH PCA & KMEANS          
             elif self.state == 3:
-                print(f'Calculate change map at state {self.state_codesp[self.state]}')
+                print(f'Calculate change map at state {self.state_codes[self.state]}')
                 #create a service call to the change detector
                 changed_map = self.map_change_detector_routine.find_changes(self.ground_truth_map, self.current_map)
                 self.state = 4

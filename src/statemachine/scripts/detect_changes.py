@@ -98,7 +98,7 @@ class ChangeDetector():
         
         # print('\ncomputing k means')
         
-        components = 3
+        components = 10
         least_index, change_map = self.clustering(FVS, components, new_size)
         
         change_map[change_map == least_index] = 255
