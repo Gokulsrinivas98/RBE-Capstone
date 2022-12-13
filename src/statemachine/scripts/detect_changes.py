@@ -113,5 +113,9 @@ class ChangeDetector():
                                  (0,0,1,0,0)), dtype=np.uint8)
         
         cleanChangeMap = cv2.erode(change_map, kernel)
+        kernel = np.ones((5,5), np.uint8)
+        change_map = cv2.dilate(change_map, kernel, iterations=2)
+
+        cv2.imwrite("current_change_map.jpg", change_map)
 
         return change_map
