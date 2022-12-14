@@ -12,6 +12,8 @@ from geometry_msgs.msg import Pose, PoseWithCovarianceStamped, Point, Quaternion
 from tf.transformations import quaternion_from_euler
 from random import randrange
 import time
+import matplotlib.pyplot as plt
+
 
 class Explore:
 
@@ -79,14 +81,27 @@ class Explore:
 		self.map_dict = dict()
 		self.locations = dict()
 		# Define goal points
+		# self.locations['Point1'] = self.loc_pose(-3.500, -4.000, 0.000, 0, 0, 0) 
+		# self.locations['Point2'] = self.loc_pose(-2.0,-2.5,0,0,0,0)
+		# self.locations['Point2'] = self.loc_pose(1.8,3,0,0,0,0)
+		# self.locations['Point3'] = self.loc_pose(1.8,-0.4,0,0,0,0)
+		# self.locations['Point4'] = self.loc_pose(4.5,-0.4,0,0,0,0)
+		# self.locations['Point5'] = self.loc_pose(5.93,-0.12,0,0,0,0)
+		# self.locations['Point6'] = self.loc_pose(9.5,-5.56,0,0,0,1.5)
+		# self.locations['Point7'] = self.loc_pose(9.8,-2,0,0,0,1.5)
+		# self.locations['Point8'] = self.loc_pose(8.5,-4.8,0,0,0,1.57)
+		# self.locations['Point9'] = self.loc_pose(9.4,3.5,0,0,0,1.5)
+		# self.locations['Point10'] = self.loc_pose(3.55,0.82,0,0,0,1.5)
+
 		self.locations['Point1'] = self.loc_pose(-3.500, -4.000, 0.000, 0, 0, 1.57) 
 		self.locations['Point2'] = self.loc_pose(-2.2,-2.5,0,0,0,0)
 		self.locations['Point3'] = self.loc_pose(1.8,3,0,0,0,0)
-		self.locations['Point4'] = self.loc_pose(5.17,-0.52,0,0,0,0)
-		self.locations['Point5'] = self.loc_pose(8.93,-5,0,0,0,1.5)
-		self.locations['Point6'] = self.loc_pose(8.5,-4.8,0,0,0,1.57)
-		self.locations['Point7'] = self.loc_pose(9.4,3.5,0,0,0,1.5)
-		self.locations['Point8'] = self.loc_pose(3.55,0.82,0,0,0,1.5)
+		self.locations['Point4'] = self.loc_pose(3.55,0.82,0,0,0,1.5)
+		# self.locations['Point5'] = self.loc_pose(5.17,-0.52,0,0,0,0)
+		self.locations['Point6'] = self.loc_pose(8.38,-2.2,0,0,0,-1.5)
+		self.locations['Point7'] = self.loc_pose(8.7,-5.5,0,0,0,1.5)
+		self.locations['Point8'] = self.loc_pose(9.6,2.7,0,0,0,3.14)
+		self.locations['Point9'] = self.loc_pose(6,3.5,0,0,0, 3.14)
 
 		# Add goal points to maps dictionary
 		self.map_dict[map_type] = self.locations

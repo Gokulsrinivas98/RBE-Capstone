@@ -1,4 +1,4 @@
-image: /home/aka/capstone_ws/src/autonomous_tb/maps/map.pgm
+image: case2_costmap.pgm
 resolution: 0.050000
 origin: [-10.000000, -10.000000, 0.000000]
 negate: 0
