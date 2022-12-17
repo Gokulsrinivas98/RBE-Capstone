@@ -6,7 +6,7 @@
 	<!-- World -->
 	<include file="$(find gazebo_ros)/launch/empty_world.launch">
 	  <arg name="world_name" value="$(find autonomous_tb)/world/house.world" if="$(eval map_type == 'no_obs')"/>
-	  <arg name="world_name" value="$(find autonomous_tb)/world/world_obs_case3.world" if="$(eval map_type == 'obs')"/>		
+	  <arg name="world_name" value="$(find autonomous_tb)/world/aka.world" if="$(eval map_type == 'obs')"/>		
 	</include>
 	
 	
