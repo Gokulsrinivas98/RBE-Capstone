@@ -9,8 +9,8 @@ class Scheduler():
 
     def __init__(self):
         self.state = 0
-        self.ground_truth_map = "/home/deveshdatwani/capstone/src/statemachine/robot_map/ground_truth_map.jpeg"
-        self.current_map = "/home/deveshdatwani/capstone/src/statemachine/robot_map/current_map.jpeg"
+        self.ground_truth_map = "/home/deveshdatwani/capstone/src/statemachine/robot_map/base_costmap.pgm"
+        self.current_map = "/home/deveshdatwani/capstone/src/statemachine/robot_map/obstacle_costmap.pgm"
         self.time = time.time()
         self.ideal_score = None 
         self.state_codes = {-1:"shutdown", 
@@ -20,7 +20,7 @@ class Scheduler():
                             3: "",
                             4: "",
                             5: "compare cost maps"}
-        #self.map_change_detector_routine =  Explore()
+        self.map_change_detector_routine =  MapChangeServer()
 
 
     def run(self):
@@ -55,7 +55,7 @@ class Scheduler():
 
             # 4. ROBOT CHANGE DETECTION WITH PCA & KMEANS          
             elif self.state == 3:
-                print(f'Calculate change map at state {self.state_codesp[self.state]}')
+                print(f'Calculate change map at state {self.state_codes[self.state]}')
                 #create a service call to the change detector
                 changed_map = self.map_change_detector_routine.find_changes(self.ground_truth_map, self.current_map)
                 self.state = 4
@@ -65,7 +65,7 @@ class Scheduler():
 
             # 5. NOTIFY USER WITH MOBILE APPLICATION
             elif self.state == 4:
-                self.state = None                
+                self.state = -1                
         
         
         # 6. IF NOT STATE IS ACTIVE / BATTERY DOWN
