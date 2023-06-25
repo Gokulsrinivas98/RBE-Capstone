@@ -16,5 +16,25 @@ The proposed solution is as follows:
 The methodology is as follows: 
 ![Methodology](https://github.com/Gokulsrinivas98/RBE-Capstone/blob/main/Final%20ppt%20images/Capstone%20Final%20presenatation/Slide11.JPG)
 
+## Output
+### Mapping
+https://github.com/Gokulsrinivas98/RBE-Capstone/assets/34882860/958b377d-a7de-48d8-8e98-cef6de31963b
+
+### Generated Map
+![](https://github.com/Gokulsrinivas98/RBE-Capstone/blob/main/Final%20ppt%20images/Capstone%20Final%20presenatation/Slide14.JPG)
+
+### RRT Outputs wrt to Ground truth
+![rrt_obs_case2_1](https://github.com/Gokulsrinivas98/RBE-Capstone/assets/34882860/37304cb3-e0e0-4013-becd-4c1432a3e4fb)
+![rrt_obs_case2_2](https://github.com/Gokulsrinivas98/RBE-Capstone/assets/34882860/db36763a-c640-4824-bdcf-fe8283d2b672)
+
+### Change Detection
+![25](https://github.com/Gokulsrinivas98/RBE-Capstone/assets/34882860/3cc55336-cf8a-4e12-9366-3d1e32660920)
+
+### Gradients
+![Gradients](https://github.com/Gokulsrinivas98/RBE-Capstone/blob/main/Final%20ppt%20images/Capstone%20Final%20presenatation/Slide28.JPG)
+
+### Risk evaluation in different situations
+![Risk](https://github.com/Gokulsrinivas98/RBE-Capstone/blob/main/Final%20ppt%20images/Capstone%20Final%20presenatation/Slide33.JPG)
+
 ## Documentation
 For further information, refer to the [project report](https://github.com/Gokulsrinivas98/RBE-Capstone/blob/main/Capstone_Final_Report.pdf) 
